@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DetailsCard from "../components/detailsCard/DetailsCard";
 import { useState, useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
