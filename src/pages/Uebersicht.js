@@ -20,7 +20,7 @@ function Uebersicht() {
             });
     }, []);
 
-    { console.log("Das wird vor dem useEffect ausgeführt da das fetch asynchr. läuft") }
+
 
 
     return (

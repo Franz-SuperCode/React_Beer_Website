@@ -7,9 +7,7 @@ import Navbar from "../components/navbar/Navbar";
 function Details() {
 
     const [beerArray, setBeerArray] = useState([]);
-    const params = useParams(); //Hole die ID von der URL
-    let theID = params.id;  //Speichere diese in die Variable theID
-    console.log(theID);
+
 
     //Hole die Daten aus der API und speichere dieses Array in beerArray
     //Sobald es alle Daten von fetch hat
@@ -28,10 +26,7 @@ function Details() {
     //Durchsuche jedes Objekt vom Array und prüfe folgendes.
     // Bei true, Speichere dieses Objekt in die Variable
 
-    let foundRightObject = beerArray.find((object) => {
-        console.log("objectID", object._id);
-        return object._id === theID;
-    });
+
 
 
     let random = Number(Math.floor((Math.random()) * 42));
