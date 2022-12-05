@@ -5,7 +5,7 @@ function UbersichtCard(props) {
 
     return (
         <section className="ubersichtCard">
-            <img src={props.img_url} />
+            <img alt="" src={props.img_url} />
             <article>
                 <h2>{props.name}</h2>
                 <h3>{props.tagline}</h3>
