@@ -1,10 +1,13 @@
 import "./Navbar.css";
+import logo from "../../assets/img/Logo.svg"
 import { Link } from "react-router-dom";
-import Logo from "../../assets/img/Logo.svg";
 
 function Navbar() {
     return (
-        <div></div>
+        <Link to="/">   <div className="navbar">
+            <img src={logo} />
+        </div>
+        </Link>
     );
 };
 

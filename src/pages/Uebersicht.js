@@ -3,6 +3,7 @@ import UebersichtCard from "../components/UebersichtCard/UebersichtCard";
 import Navbar from "../components/navbar/Navbar";
 
 
+
 function Uebersicht() {
 
     const [beerArray, setBeerArray] = useState([]);
@@ -23,7 +24,7 @@ function Uebersicht() {
 
 
     return (
-        <div>
+        <div className="uebersicht">
             {beerArray.map((beerObject) => {
                 return <UebersichtCard
                     alt={beerObject.name}
@@ -34,6 +35,7 @@ function Uebersicht() {
                     key={beerObject._id}
                     id={beerObject._id} />
             })}
+            <Navbar />
         </div >
     );
 }

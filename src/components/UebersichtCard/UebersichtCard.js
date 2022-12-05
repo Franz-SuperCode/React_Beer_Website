@@ -1,10 +1,10 @@
 import "./UebersichtCard.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function UbersichtCard(props) {
 
     return (
-        <section>
+        <section className="ubersichtCard">
             <img src={props.img_url} />
             <article>
                 <h2>{props.name}</h2>

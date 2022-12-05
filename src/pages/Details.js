@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import DetailsCard from "../components/detailsCard/DetailsCard";
 import { useState, useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
@@ -27,6 +27,7 @@ function Details() {
     console.log(beerArray);
     //Durchsuche jedes Objekt vom Array und prüfe folgendes.
     // Bei true, Speichere dieses Objekt in die Variable
+
     let foundRightObject = beerArray.find((object) => {
         console.log("objectID", object._id);
         return object._id === theID;
@@ -34,19 +35,22 @@ function Details() {
     console.log("Found", foundRightObject);
     console.log("theID", theID);
 
-
+    // ------------ Das hier einkommentieren ergibt Fehler -----------
     return (
         <div>
-            <DetailsCard
-            // img_url={foundRightObject.image_url}
-            // name={foundRightObject.name}
-            // tagline={foundRightObject.tagline}
-            // contributed={foundRightObject.contributed_by}
-            // attenuation_level={foundRightObject.attenuation_level}
-            // key={foundRightObject._id}
-            // id={foundRightObject._id}
-            />
 
+
+            <DetailsCard
+                img_url={foundRightObject?.image_url}
+                name={foundRightObject?.name}
+                tagline={foundRightObject?.tagline}
+                contributed={foundRightObject?.contributed_by}
+                attenuation_level={foundRightObject?.attenuation_level}
+                key={foundRightObject?._id}
+                id={foundRightObject?._id}
+            />
+            <Link to="/uebersicht"><button>BACK</button></Link>
+            <Navbar />
         </div >
     );
 
