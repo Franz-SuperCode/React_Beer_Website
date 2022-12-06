@@ -22,7 +22,6 @@ function Uebersicht() {
 
 
 
-
     return (
         <div className="uebersicht">
             {beerArray.map((beerObject) => {
